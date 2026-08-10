@@ -1,0 +1,8 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="TutorialsNinja Suite">
+    <test name="E2E Flow Test">
+        <classes>
+            <class name="com.tutorialsninja.tests.TutorialsNinjaTest"/>
+        </classes>
+    </test>
+</suite>

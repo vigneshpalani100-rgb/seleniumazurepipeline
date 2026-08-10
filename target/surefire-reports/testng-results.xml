@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-08-10T15:42:56 IST" name="Surefire suite" finished-at="2026-08-10T15:43:04 IST" duration-ms="8749">
+    <groups>
+    </groups>
+    <test started-at="2026-08-10T15:42:56 IST" name="Surefire test" finished-at="2026-08-10T15:43:04 IST" duration-ms="8749">
+      <class name="com.tutorialsninja.tests.testninja">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.tutorialsninja.tests.testninja@75f9eccc]" started-at="2026-08-10T15:42:56 IST" name="setUp" finished-at="2026-08-10T15:42:57 IST" duration-ms="1615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLoginSearchAddToCartCheckoutAndLogout()[pri:0, instance:com.tutorialsninja.tests.testninja@75f9eccc]" started-at="2026-08-10T15:42:57 IST" name="testLoginSearchAddToCartCheckoutAndLogout" finished-at="2026-08-10T15:43:04 IST" duration-ms="6877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLoginSearchAddToCartCheckoutAndLogout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.tutorialsninja.tests.testninja@75f9eccc]" started-at="2026-08-10T15:43:04 IST" name="tearDown" finished-at="2026-08-10T15:43:04 IST" duration-ms="229" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.tutorialsninja.tests.testninja -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
