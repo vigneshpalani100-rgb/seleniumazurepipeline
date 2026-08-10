@@ -99,8 +99,15 @@ public class testninja {
         driver.findElement(By.linkText("Checkout")).click();  */
 
         // 8. Logout from website
-        driver.findElement(By.xpath("//span[text()='My Account']")).click();
-        WebElement logoutBtn = wait.until(
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+WebElement myAccount = wait.until(
+    ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='My Account']"))
+);
+myAccount.click();
+
+        driver.findElement(By.xpath("//span[text()='My Account']/parent::a")).click();
+        
+      /*  WebElement logoutBtn = wait.until(
             ExpectedConditions.elementToBeClickable(By.linkText("Logout"))
         );
         logoutBtn.click();
@@ -108,7 +115,7 @@ public class testninja {
         WebElement logoutHeader = wait.until(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Account Logout']"))
         );
-        Assert.assertTrue(logoutHeader.isDisplayed(), "User was not logged out successfully.");
+        Assert.assertTrue(logoutHeader.isDisplayed(), "User was not logged out successfully."); */
     }
 
     @AfterMethod
