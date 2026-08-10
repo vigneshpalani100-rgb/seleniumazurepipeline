@@ -4,7 +4,7 @@
   <test name="Ninja Tests">
     <classes>
       <!-- Update this package and class name to match your actual Java file -->
-      <class name="com.tutorialsninja.tests.TutorialsNinjaTest"/>
+      <class name="com.tutorialsninja.tests.testninja"/>
     </classes>
   </test>
 </suite>
