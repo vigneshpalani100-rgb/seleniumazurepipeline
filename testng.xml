@@ -1,8 +1,10 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
-<suite name="TutorialsNinja Suite">
-    <test name="E2E Flow Test">
-        <classes>
-            <class name="com.tutorialsninja.tests.TutorialsNinjaTest"/>
-        </classes>
-    </test>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ninja Suite">
+  <test name="Ninja Tests">
+    <classes>
+      <!-- Update this package and class name to match your actual Java file -->
+      <class name="com.tutorialsninja.tests.TutorialsNinjaTest"/>
+    </classes>
+  </test>
 </suite>
