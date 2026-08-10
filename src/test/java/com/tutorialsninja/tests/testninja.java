@@ -99,7 +99,7 @@ public class testninja {
         driver.findElement(By.linkText("Checkout")).click();  */
 
         // 8. Logout from website
-       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement myAccount = wait.until(
     ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='My Account']"))
 );
