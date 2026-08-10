@@ -101,9 +101,10 @@ public class testninja {
         // 8. Logout from website
        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 WebElement myAccount = wait.until(
-    ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='My Account']"))
+    ExpectedConditions.elementToBeClickable(By.xpath("//a[@title='My Account']"))
 );
-wait.until(ExpectedConditions.elementToBeClickable(myAccount)).click();
+myAccount.click();
+
 
 
                
