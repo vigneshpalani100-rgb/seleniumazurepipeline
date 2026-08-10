@@ -105,9 +105,8 @@ WebElement myAccount = wait.until(
 );
 myAccount.click();
 
-        driver.findElement(By.xpath("//span[text()='My Account']/parent::a")).click();
-        
-      /*  WebElement logoutBtn = wait.until(
+               
+       WebElement logoutBtn = wait.until(
             ExpectedConditions.elementToBeClickable(By.linkText("Logout"))
         );
         logoutBtn.click();
@@ -115,7 +114,7 @@ myAccount.click();
         WebElement logoutHeader = wait.until(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Account Logout']"))
         );
-        Assert.assertTrue(logoutHeader.isDisplayed(), "User was not logged out successfully."); */
+        Assert.assertTrue(logoutHeader.isDisplayed(), "User was not logged out successfully."); 
     }
 
     @AfterMethod
