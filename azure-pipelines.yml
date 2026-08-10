@@ -2,14 +2,14 @@ trigger:
 - main
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-latest'
 
 steps:
 
 - script: |
-    echo "===== Java Version ====="
+    echo ===== Java Version =====
     java -version
-    echo "===== Maven Version ====="
+    echo ===== Maven Version =====
     mvn -version
   displayName: 'Check Java and Maven'
 
