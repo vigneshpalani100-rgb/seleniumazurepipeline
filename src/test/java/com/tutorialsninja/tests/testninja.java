@@ -46,8 +46,12 @@ public class testninja {
         // 1. Navigate to URL
         driver.get(BASE_URL);
 
+        WebElement mylogin = wait.until(
+            ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='My Account']/parent::a"))
+        );
+        mylogin.click();
         // 2. Login with valid email & password
-        driver.findElement(By.xpath("//span[text()='My Account']")).click();
+       
         driver.findElement(By.linkText("Login")).click();
 
         driver.findElement(By.id("input-email")).sendKeys("testninja100@gmail.com");
