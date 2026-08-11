@@ -25,7 +25,7 @@ public class testninja {
     @BeforeMethod
     public void setUp() {
         WebDriverManager.chromedriver().setup();
-        
+
         ChromeOptions options = new ChromeOptions();
         // Check for headless property (useful for CI environment)
         if (Boolean.parseBoolean(System.getProperty("headless", "false"))) {
@@ -60,10 +60,10 @@ public class testninja {
         );
         Assert.assertTrue(myAccountHeader.isDisplayed(), "User was not able to login successfully.");
 
-        // 3. Search for "laptop"
+        // 3. Search for "MacBook"
         WebElement searchBox = driver.findElement(By.name("search"));
         searchBox.clear();
-        searchBox.sendKeys("MacBook"); // MacBook is listed under laptops on TutorialsNinja
+        searchBox.sendKeys("MacBook");
         driver.findElement(By.cssSelector("button.btn.btn-default.btn-lg")).click();
 
         // 4. Click the search result item
@@ -84,10 +84,10 @@ public class testninja {
         );
         Assert.assertTrue(successAlert.getText().contains("Success: You have added MacBook to your shopping cart!"));
 
-        // 6. Go to Shopping Cart & Checkout
+        // 6. Go to Shopping Cart
         driver.findElement(By.xpath("//a[@title='Shopping Cart']")).click();
 
-       /*  // 7. Verify total amount using Assertion
+        /* // 7. Verify total amount using Assertion
         WebElement totalAmountElement = wait.until(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='col-sm-4 col-sm-offset-8']//tr[last()]/td[last()]"))
         );
@@ -96,19 +96,15 @@ public class testninja {
         Assert.assertEquals(actualTotal, expectedTotal, "Total cart amount does not match!");
 
         // Click Checkout Button
-        driver.findElement(By.linkText("Checkout")).click();  */
+        driver.findElement(By.linkText("Checkout")).click(); */
 
         // 8. Logout from website
-       WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-WebElement myAccount = wait.until(
-    ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='My Account']/parent::a"))
-);
-myAccount.click();
+        WebElement myAccount = wait.until(
+            ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='My Account']/parent::a"))
+        );
+        myAccount.click();
 
-
-
-               
-       WebElement logoutBtn = wait.until(
+        WebElement logoutBtn = wait.until(
             ExpectedConditions.elementToBeClickable(By.linkText("Logout"))
         );
         logoutBtn.click();
@@ -116,7 +112,7 @@ myAccount.click();
         WebElement logoutHeader = wait.until(
             ExpectedConditions.visibilityOfElementLocated(By.xpath("//h1[text()='Account Logout']"))
         );
-        Assert.assertTrue(logoutHeader.isDisplayed(), "User was not logged out successfully."); 
+        Assert.assertTrue(logoutHeader.isDisplayed(), "User was not logged out successfully.");
     }
 
     @AfterMethod
@@ -125,6 +121,4 @@ myAccount.click();
             driver.quit();
         }
     }
-
-    }
-
+}
