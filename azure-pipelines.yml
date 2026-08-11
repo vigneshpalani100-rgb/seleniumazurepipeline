@@ -1,8 +1,35 @@
+# trigger:
+# - main
+
+# pool:
+#   vmImage: 'windows-latest'
+
+# steps:
+
+# - script: |
+#     echo ===== Java Version =====
+#     java -version
+#     echo ===== Maven Version =====
+#     mvn -version
+#   displayName: 'Check Java and Maven'
+
+# - task: Maven@4
+#   displayName: 'Run Selenium Maven Tests'
+#   inputs:
+#     mavenPomFile: 'pom.xml'
+#     mavenOptions: '-Xmx3072m'
+#     javaHomeOption: 'JDKVersion'
+#     jdkVersionOption: 'default'
+#     jdkArchitectureOption: 'x64'
+#     publishJUnitResults: true
+#     testResultsFiles: '**/surefire-reports/TEST-*.xml'
+#     goals: 'clean test'
+
 trigger:
 - main
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'macOS-latest'
 
 steps:
 
